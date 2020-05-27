@@ -68,7 +68,7 @@ sm <- keras_model_sequential() %>%
 # Добавляем для нейронной сети оптимизатор, функцию потерь, какие метрики выводить на экран
 sm %>% compile(
   optimizer = 'rmsprop',
-  loss = 'categorical_crossentropy',
+  loss = 'mse',
   metrics = c('accuracy'))
 sm %>% fit(train_price, train_x, epochs = 5, batch_size = 125)
 
@@ -84,7 +84,7 @@ model <- keras_model_sequential() %>%
   layer_dense(units = 1, activation = "sigmoid")
 model %>% compile(
   optimizer = "rmsprop",
-  loss = "binary_crossentropy",
+  loss = "mse",
   metrics = c("acc")
   
   #обучение сетей с добавлением валидации
