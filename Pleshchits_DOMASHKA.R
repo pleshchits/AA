@@ -1,5 +1,3 @@
-
-
 # Подготовка пакетов
 install.packages('BatchGetSymbols')
 install.packages('plotly')
@@ -85,6 +83,7 @@ lstm_adam_mse <- 0.1191
 pred_out <- model %>% predict(x.test, batch_size = batch.size) %>% .[,1]
 pred_out
 
+#тесты
 mse(y.test, pred_out)
 #1.052168
 mape(y.test, pred_out)
@@ -116,6 +115,7 @@ lstm_adam_mape <- 98.2803
 
 pred_out <- model %>% predict(x.test, batch_size = batch.size) %>% .[,1]
 
+#тесты
 mse(y.test, pred_out)
 #1.760138
 mape(y.test, pred_out)
